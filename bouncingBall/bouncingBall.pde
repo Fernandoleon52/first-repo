@@ -9,7 +9,7 @@ void setup(){
 }
 
 void draw(){
-  background(255);
+  background(#2AAAF7);
   // movimiento de pelota
   x += speedX;
   y += speedY;
@@ -22,8 +22,9 @@ void draw(){
     speedY *= -1;
   }
   // pintar pelota
-  fill(0);
-  ellipse(x,y,20,20);
+  fill(247, 182, 220);
+  noStroke();
+  ellipse(x,y,random(20,30),random(20,30));
   
   
   
