@@ -10,8 +10,13 @@ void setup(){
 
 void draw(){
   background(255);
+  // movimiento de pelota
+  x += speedX;
+  y += speedY;
+  // pintar pelota
   fill(0);
   ellipse(x,y,20,20);
+  
   
   
 }
