@@ -10,10 +10,21 @@ void setup(){
 
 void draw(){
   background(#2AAAF7);
+  move();
+  bounce();
+  render();
+}
+
+//Funcion en processing
+//tipo de regreso nombrefuncion (tipoArg1, arg1, tipoArg2 arg2, ....) {...}
+void move(){
   // movimiento de pelota
   x += speedX;
   y += speedY;
-  // checamos que rebote
+  
+}
+
+void bounce(){
   if( x >= width || x < 0){
     speedX *= -1;
   }
@@ -21,11 +32,12 @@ void draw(){
   if( y >= height|| y < 0){
     speedY *= -1;
   }
-  // pintar pelota
-  fill(247, 182, 220);
+  
+}
+
+void render(){
+   fill(247, 182, 220);
   noStroke();
   ellipse(x,y,random(20,30),random(20,30));
-  
-  
   
 }
